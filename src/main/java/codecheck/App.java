@@ -3,24 +3,26 @@ package codecheck;
 public class App {
 	public static void main(String[] args) {
 
-		System.out.println(args[0]);
+//		System.out.println(args[0]);
 
 		String separator = "\r\n";
 
 		String in = null;
 		String output = null;
 
-		for (int i = 0, l = args.length; i < l; i++) {
 
-			if (i == 0) {
-				in = args[i];
-			} else {
-				in = in + args[i];
-			}
+//		for (int i = 0, l = args.length; i < l; i++) {
+//
+//			if (i == 0) {
+//				in = args[i];
+//			} else {
+//				in = in + args[i];
+//			}
+//
+//		}
 
-		}
-
-		int check = Integer.parseInt(in);
+		in = args[0];
+		int check = Integer.parseInt(args[0]);
 
 
 		// 1000以下の場合
@@ -54,7 +56,7 @@ public class App {
 			output = "invalid";
 		}
 
-			System.out.println(separator + output + separator);
+			System.out.println(output);
 
 	}
 }

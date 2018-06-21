@@ -37,7 +37,7 @@ public class App {
 				System.out.println(String.valueOf(in.charAt(i)));
 
 				// 3のつく場合
-				if ("3" == String.valueOf(in.charAt(i))) {
+				if ("3".equals(String.valueOf(in.charAt(i)))) {
 					// 3の倍数でかつ3のつく1000以下の非負整数の場合
 					if (0 == check % 3) {
 						output = "dumb";

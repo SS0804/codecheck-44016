@@ -11,7 +11,10 @@ public class App {
 		String output = null;
 
 
-//		for (int i = 0, l = args.length; i < l; i++) {
+//		for (int i = 0, l = args[0].length(); i < l; i++) {
+//
+//			args[0].charAt(i);
+//
 //
 //			if (i == 0) {
 //				in = args[i];
@@ -22,6 +25,7 @@ public class App {
 //		}
 
 		in = args[0];
+
 		int check = Integer.parseInt(args[0]);
 
 
@@ -35,23 +39,24 @@ public class App {
 					// 3の倍数でかつ3のつく1000以下の非負整数の場合
 					if (0 == check % 3) {
 						output = "dumb";
+						break;
 						// 3のつく1000以下の非負整数の場合
 					} else {
 						output = "stupid";
+						break;
 					}
-
-					// 3のつかない場合
-				} else {
-					// 3の倍数の1000以下の非負整数の場合
-					if (0 == check % 3) {
-						output = "idiot";
-					} else {
-						output = "smart";
-					}
-
 				}
 			}
 
+			// 3のつかない場合
+			if(output ==null) {
+				// 3の倍数の1000以下の非負整数の場合
+				if (0 == check % 3) {
+					output = "idiot";
+				} else {
+					output = "smart";
+				}
+			}
 		} else {
 			output = "invalid";
 		}

@@ -5,6 +5,8 @@ public class App {
 
 		System.out.println(args[0]);
 
+		String separator = "\r\n";
+
 		String in = null;
 		String output = null;
 
@@ -52,7 +54,7 @@ public class App {
 			output = "invalid";
 		}
 
-			System.out.println(output);
+			System.out.println(separator + output + separator);
 
 	}
 }

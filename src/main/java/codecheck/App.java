@@ -24,42 +24,76 @@ public class App {
 //
 //		}
 
+
+		String[] input ;
+
+		for (int i = 0; i < args[0].length(); i++) {
+
+			if (separator.equals(args[0].charAt(i))) {
+
+
+
+			} else {
+
+
+			}
+
+
+
+		}
+
+
+
+
 		in = args[0];
+		int check;
 
-		int check = Integer.parseInt(args[0]);
+		try {
+			check = Integer.parseInt(args[0]);
+
+			// 1000以下の場合
+						if(check <= 1000) {
+
+							for (int i = 0; i < in.length(); i++) {
+
+								// 3のつく場合
+								if ("3".equals(String.valueOf(in.charAt(i)))) {
+									// 3の倍数でかつ3のつく1000以下の非負整数の場合
+									if (0 == check % 3) {
+										output = "dumb";
+										break;
+										// 3のつく1000以下の非負整数の場合
+									} else {
+										output = "stupid";
+										break;
+									}
+								}
+							}
+
+							// 3のつかない場合
+							if(output ==null) {
+								// 3の倍数の1000以下の非負整数の場合
+								if (0 == check % 3) {
+									output = "idiot";
+								} else {
+									output = "smart";
+								}
+							}
+						} else {
+							output = "invalid";
+						}
 
 
-		// 1000以下の場合
-		if(check <= 1000) {
 
-			for (int i = 0; i < in.length(); i++) {
-
-				// 3のつく場合
-				if ("3".equals(String.valueOf(in.charAt(i)))) {
-					// 3の倍数でかつ3のつく1000以下の非負整数の場合
-					if (0 == check % 3) {
-						output = "dumb";
-						break;
-						// 3のつく1000以下の非負整数の場合
-					} else {
-						output = "stupid";
-						break;
-					}
-				}
-			}
-
-			// 3のつかない場合
-			if(output ==null) {
-				// 3の倍数の1000以下の非負整数の場合
-				if (0 == check % 3) {
-					output = "idiot";
-				} else {
-					output = "smart";
-				}
-			}
-		} else {
+		} catch (NumberFormatException e) {
 			output = "invalid";
 		}
+
+
+
+
+
+
 
 			System.out.println(output);
 

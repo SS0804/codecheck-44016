@@ -44,12 +44,12 @@ public class App {
 								} else {
 
 									//TODO
-									System.out.println("連結前：" + output);
+									//System.out.println("連結前：" + output);
 
 									output = output + LINE_SEPARATOR + "dumb";
 
 									//TODO
-									System.out.println("連結後：" + output);
+									//System.out.println("連結後：" + output);
 
 								}
 								checkFlg = true;
@@ -61,12 +61,12 @@ public class App {
 									output = "stupid";
 								} else {
 									//TODO
-									System.out.println("連結前：" + output);
+									//System.out.println("連結前：" + output);
 
 									output = output + LINE_SEPARATOR + "stupid";
 
 									//TODO
-									System.out.println("連結後：" + output);
+									//System.out.println("連結後：" + output);
 								}
 								checkFlg = true;
 								break;
@@ -85,11 +85,11 @@ public class App {
 							} else {
 
 								//TODO
-								System.out.println("連結前：" + output);
+								//System.out.println("連結前：" + output);
 								output = output + LINE_SEPARATOR + "idiot";
 
 								//TODO
-								System.out.println("連結後：" + output);
+								//System.out.println("連結後：" + output);
 
 							}
 							checkFlg = true;
@@ -101,11 +101,11 @@ public class App {
 							} else {
 
 								//TODO
-								System.out.println("連結前：" + output);
+								//System.out.println("連結前：" + output);
 								output = output + LINE_SEPARATOR + "smart";
 
 								//TODO
-								System.out.println("連結後：" + output);
+								//System.out.println("連結後：" + output);
 
 							}
 							checkFlg = true;
@@ -119,23 +119,29 @@ public class App {
 					} else {
 
 						//TODO
-						System.out.println("連結前：" + output);
+						//System.out.println("連結前：" + output);
 						output = output + LINE_SEPARATOR + "invalid";
 						//TODO
-						System.out.println("連結後：" + output);
+					//	System.out.println("連結後：" + output);
 
 					}
 					checkFlg = true;
 				}
 
 			} catch (NumberFormatException e) {
-				//TODO
-				System.out.println("連結前：" + output);
-				output = output + LINE_SEPARATOR + "invalid";
-				//TODO
-				System.out.println("連結後：" + output);
-			}
 
+				if (output.isEmpty()) {
+					output = "invalid";
+				} else {
+
+					//TODO
+					//System.out.println("連結前：" + output);
+					output = output + LINE_SEPARATOR + "invalid";
+					//TODO
+					//System.out.println("連結後：" + output);
+				}
+
+			}
 		}
 
 		System.out.println(output);

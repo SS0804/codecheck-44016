@@ -6,8 +6,6 @@ import java.util.List;
 public class App {
 	public static void main(String[] args) {
 
-//		String separator = "\r\n";
-
 		String LINE_SEPARATOR = System.getProperty("line.separator");
 
 		String output = "";
@@ -43,30 +41,21 @@ public class App {
 									output = "dumb";
 								} else {
 
-									//TODO
-									//System.out.println("連結前：" + output);
-
 									output = output + LINE_SEPARATOR + "dumb";
-
-									//TODO
-									//System.out.println("連結後：" + output);
 
 								}
 								checkFlg = true;
 								break;
+
 								// 3のつく1000以下の非負整数の場合
 							} else {
 
 								if (output.isEmpty()) {
 									output = "stupid";
 								} else {
-									//TODO
-									//System.out.println("連結前：" + output);
 
 									output = output + LINE_SEPARATOR + "stupid";
 
-									//TODO
-									//System.out.println("連結後：" + output);
 								}
 								checkFlg = true;
 								break;
@@ -84,12 +73,7 @@ public class App {
 								output = "idiot";
 							} else {
 
-								//TODO
-								//System.out.println("連結前：" + output);
 								output = output + LINE_SEPARATOR + "idiot";
-
-								//TODO
-								//System.out.println("連結後：" + output);
 
 							}
 							checkFlg = true;
@@ -100,12 +84,7 @@ public class App {
 								output = "smart";
 							} else {
 
-								//TODO
-								//System.out.println("連結前：" + output);
 								output = output + LINE_SEPARATOR + "smart";
-
-								//TODO
-								//System.out.println("連結後：" + output);
 
 							}
 							checkFlg = true;
@@ -118,11 +97,7 @@ public class App {
 						output = "invalid";
 					} else {
 
-						//TODO
-						//System.out.println("連結前：" + output);
 						output = output + LINE_SEPARATOR + "invalid";
-						//TODO
-					//	System.out.println("連結後：" + output);
 
 					}
 					checkFlg = true;
@@ -134,11 +109,8 @@ public class App {
 					output = "invalid";
 				} else {
 
-					//TODO
-					//System.out.println("連結前：" + output);
 					output = output + LINE_SEPARATOR + "invalid";
-					//TODO
-					//System.out.println("連結後：" + output);
+
 				}
 
 			}
